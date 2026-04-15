@@ -1,0 +1,4 @@
+seq_len,kv_footprint_mib,kv_bandwidth_mib_per_token,weight_stream_mib_per_token
+512.0,24.0,24.0,111.625
+2048.0,96.0,96.0,111.625
+8192.0,384.0,384.0,111.625
