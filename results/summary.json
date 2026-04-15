@@ -1,0 +1,141 @@
+{
+  "validation": {
+    "config": {
+      "vocab_size": 256,
+      "max_seq_len": 32,
+      "num_layers": 2,
+      "d_model": 128,
+      "num_heads": 4,
+      "num_kv_heads": 4,
+      "ffn_dim": 512,
+      "eps": 1e-05
+    },
+    "tokens": [
+      3,
+      19,
+      7,
+      42,
+      11,
+      8,
+      14,
+      5,
+      91,
+      17,
+      22,
+      6
+    ],
+    "max_abs_error": 2.980232238769531e-07,
+    "mean_abs_error": 4.89201461562061e-08,
+    "passed": true,
+    "cache_lengths": [
+      12,
+      12
+    ],
+    "sampled_tokens": [
+      153,
+      101,
+      101,
+      101,
+      101,
+      101,
+      101,
+      154,
+      101,
+      85,
+      29,
+      48
+    ]
+  },
+  "baseline_model": {
+    "vocab_size": 32000,
+    "max_seq_len": 8192,
+    "num_layers": 24,
+    "d_model": 512,
+    "num_heads": 8,
+    "num_kv_heads": 8,
+    "ffn_dim": 2048,
+    "eps": 1e-05
+  },
+  "hardware": {
+    "projection_macs_per_cycle": 2048,
+    "mlp_macs_per_cycle": 2048,
+    "attention_macs_per_cycle": 1024,
+    "vector_ops_per_cycle": 256,
+    "dma_bytes_per_cycle": 256,
+    "compute_efficiency": 0.8,
+    "dma_efficiency": 0.85,
+    "scratchpad_bytes": 2097152,
+    "weight_buffer_bytes": 524288,
+    "kv_stream_buffer_bytes": 524288,
+    "clock_ghz": 1.0,
+    "use_bypass_for_current_kv": true
+  },
+  "precision": {
+    "activation_bytes": 2,
+    "weight_bytes": 1,
+    "kv_bytes": 2,
+    "accumulator_bytes": 4,
+    "activation_name": "BF16",
+    "weight_name": "INT8",
+    "kv_name": "BF16"
+  },
+  "breakdown_summary": {
+    "seq_len": 2048,
+    "total_cycles": 1110445,
+    "total_time_us": 1110.445,
+    "overlap_reduction_pct": 3.0549039362269603,
+    "category_us::Embedding/dispatch": 0.013,
+    "category_us::Attention front-end": 560.664,
+    "category_us::KV read + attention score": 30.72,
+    "category_us::Softmax": 9.6,
+    "category_us::Attention value mix": 30.72,
+    "category_us::Attention output/residual": 3.912,
+    "category_us::MLP front-end": 0.48,
+    "category_us::MLP": 388.656,
+    "category_us::MLP output/residual": 0.072,
+    "category_us::Logits/sample": 85.608
+  },
+  "memory_summary_rows": [
+    {
+      "seq_len": 512.0,
+      "kv_footprint_mib": 24.0,
+      "kv_bandwidth_mib_per_token": 24.0,
+      "weight_stream_mib_per_token": 111.625
+    },
+    {
+      "seq_len": 2048.0,
+      "kv_footprint_mib": 96.0,
+      "kv_bandwidth_mib_per_token": 96.0,
+      "weight_stream_mib_per_token": 111.625
+    },
+    {
+      "seq_len": 8192.0,
+      "kv_footprint_mib": 384.0,
+      "kv_bandwidth_mib_per_token": 384.0,
+      "weight_stream_mib_per_token": 111.625
+    }
+  ],
+  "crossover_seq_len": null,
+  "memory_crossover_seq_len": 4096,
+  "bottleneck_2048": "Attention front-end",
+  "bottleneck_8192": "Attention front-end",
+  "primary_memory_bottleneck_2048": "Weight streaming",
+  "primary_memory_bottleneck_8192": "KV-cache traffic",
+  "figure_paths": {
+    "pipeline": "results/figures/pipeline_diagram.png",
+    "architecture": "results/figures/architecture_diagram.png",
+    "breakdown": "results/figures/latency_breakdown_2048.png",
+    "latency_vs_sequence": "results/figures/latency_vs_sequence.png",
+    "kv_footprint": "results/figures/kv_footprint.png",
+    "precision_comparison": "results/figures/precision_comparison.png",
+    "model_size_sensitivity": "results/figures/model_size_sensitivity.png"
+  },
+  "table_paths": {
+    "latency_vs_sequence": "results/tables/latency_vs_sequence.csv",
+    "kv_footprint": "results/tables/kv_footprint.csv",
+    "precision_comparison": "results/tables/precision_comparison.csv",
+    "model_size_sensitivity": "results/tables/model_size_sensitivity.csv",
+    "memory_summary": "results/tables/memory_summary.csv",
+    "stage_records_2048": "results/tables/stage_records_2048.csv"
+  }
+}

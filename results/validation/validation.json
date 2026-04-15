@@ -1,0 +1,47 @@
+{
+  "config": {
+    "vocab_size": 256,
+    "max_seq_len": 32,
+    "num_layers": 2,
+    "d_model": 128,
+    "num_heads": 4,
+    "num_kv_heads": 4,
+    "ffn_dim": 512,
+    "eps": 1e-05
+  },
+  "tokens": [
+    3,
+    19,
+    7,
+    42,
+    11,
+    8,
+    14,
+    5,
+    91,
+    17,
+    22,
+    6
+  ],
+  "max_abs_error": 2.980232238769531e-07,
+  "mean_abs_error": 4.89201461562061e-08,
+  "passed": true,
+  "cache_lengths": [
+    12,
+    12
+  ],
+  "sampled_tokens": [
+    153,
+    101,
+    101,
+    101,
+    101,
+    101,
+    101,
+    154,
+    101,
+    85,
+    29,
+    48
+  ]
+}
