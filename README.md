@@ -53,7 +53,7 @@ llm_inference_pipeline_accelerator/
 
 ```bash
 git clone https://github.com/Koushik-Ravikumar/CECS-530-LLM-Inference-Pipeline-Accelerator.git
-cd llm_inference_pipeline_accelerator
+cd CECS-530-LLM-Inference-Pipeline-Accelerator
 ```
 
 ### 2. Create and activate a virtual environment
