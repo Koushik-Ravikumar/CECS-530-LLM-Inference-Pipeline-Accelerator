@@ -52,11 +52,9 @@ llm_inference_pipeline_accelerator/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/llm_inference_pipeline_accelerator.git
+git clone https://github.com/Koushik-Ravikumar/CECS-530-LLM-Inference-Pipeline-Accelerator.git
 cd llm_inference_pipeline_accelerator
 ```
-
-Replace `<your-username>` with your GitHub username or organization name.
 
 ### 2. Create and activate a virtual environment
 
