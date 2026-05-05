@@ -49,7 +49,30 @@ llm_inference_pipeline_accelerator/
 
 ## Quick Start
 
-### 1. Install dependencies
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/<your-username>/llm_inference_pipeline_accelerator.git
+cd llm_inference_pipeline_accelerator
+```
+
+Replace `<your-username>` with your GitHub username or organization name.
+
+### 2. Create and activate a virtual environment
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+```
+
+On Windows PowerShell, activate the environment with:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -58,7 +81,7 @@ pip install -r requirements.txt
 Requirements: `numpy`, `matplotlib`, `python-docx`, `Pillow`  
 Python ≥ 3.10 recommended.
 
-### 2. Run tests
+### 4. Run tests
 
 ```bash
 python tests.py
@@ -66,7 +89,7 @@ python tests.py
 
 Expected output: **4/4 tests pass**, `max_err < 1e-4`.
 
-### 3. Run the demo
+### 5. Run the demo
 
 ```bash
 python run_demo.py
@@ -74,7 +97,7 @@ python run_demo.py
 
 Runs a small functional decode and prints the analytic latency estimate for a baseline hardware configuration.
 
-### 4. Reproduce all figures and tables
+### 6. Reproduce all figures and tables
 
 ```bash
 python reproduce.py --output-dir results
