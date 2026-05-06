@@ -85,7 +85,7 @@ Python ≥ 3.10 recommended.
 python tests.py
 ```
 
-Expected output: **4/4 tests pass**, `max_err < 1e-4`.
+Expected output: **8/8 tests pass**, `max_err < 1e-4`.
 
 ### 5. Run the demo
 
