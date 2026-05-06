@@ -25,7 +25,7 @@
       6
     ],
     "max_abs_error": 2.980232238769531e-07,
-    "mean_abs_error": 4.766990002735838e-08,
+    "mean_abs_error": 4.89201461562061e-08,
     "passed": true,
     "cache_lengths": [
       12,
